@@ -1,0 +1,385 @@
+[
+  {
+    "id": "E01",
+    "category": "clean",
+    "input": "Smith, J., & Doe, A. (2020). Standard extraction test. Journal of Testing, 12(3), 10-20. https://doi.org/10.1234/test",
+    "expected": {
+      "raw": "Smith, J., & Doe, A. (2020). Standard extraction test. Journal of Testing, 12(3), 10-20. https://doi.org/10.1234/test",
+      "authors": ["Smith, J.", "Doe, A."],
+      "title": "Standard extraction test",
+      "year": 2020,
+      "venue": "Journal of Testing",
+      "doi": "10.1234/test",
+      "type": "article"
+    }
+  },
+  {
+    "id": "E02",
+    "category": "formatting",
+    "input": "[1] J. Smith and A. Doe, \"Standard extraction test,\" J. Test., vol. 12, no. 3, pp. 10-20, 2020.",
+    "expected": {
+      "raw": "[1] J. Smith and A. Doe, \"Standard extraction test,\" J. Test., vol. 12, no. 3, pp. 10-20, 2020.",
+      "authors": ["J. Smith", "A. Doe"],
+      "title": "Standard extraction test",
+      "year": 2020,
+      "venue": "J. Test.",
+      "doi": null,
+      "type": "article"
+    }
+  },
+  {
+    "id": "E03",
+    "category": "formatting",
+    "input": "Doe A, Lee B (2021) No punctuation paper. Nature. doi:10.5678/nature123",
+    "expected": {
+      "raw": "Doe A, Lee B (2021) No punctuation paper. Nature. doi:10.5678/nature123",
+      "authors": ["Doe A", "Lee B"],
+      "title": "No punctuation paper",
+      "year": 2021,
+      "venue": "Nature",
+      "doi": "10.5678/nature123",
+      "type": "article"
+    }
+  },
+  {
+    "id": "E04",
+    "category": "missing_metadata",
+    "input": "White, D. The incomplete reference.",
+    "expected": {
+      "raw": "White, D. The incomplete reference.",
+      "authors": ["White, D."],
+      "title": "The incomplete reference",
+      "year": null,
+      "venue": null,
+      "doi": null,
+      "type": "other"
+    }
+  },
+  {
+    "id": "E05",
+    "category": "multiple",
+    "input": "1. Black, C. (2018). First paper. AI Review.\n2. Green, D. (2019). Second paper. ML Today, 10.111/ml.",
+    "expected": [
+      {
+        "raw": "1. Black, C. (2018). First paper. AI Review.",
+        "authors": ["Black, C."],
+        "title": "First paper",
+        "year": 2018,
+        "venue": "AI Review",
+        "doi": null,
+        "type": "article"
+      },
+      {
+        "raw": "2. Green, D. (2019). Second paper. ML Today, 10.111/ml.",
+        "authors": ["Green, D."],
+        "title": "Second paper",
+        "year": 2019,
+        "venue": "ML Today",
+        "doi": "10.111/ml",
+        "type": "article"
+      }
+    ]
+  },
+  {
+    "id": "E06",
+    "category": "noisy",
+    "input": "Author:\nJohnson, P.\n\nTitle:\nLine breaks are annoying\n\nYear: 2023\nJournal: Journal of Formatting",
+    "expected": {
+      "raw": "Author:\nJohnson, P.\n\nTitle:\nLine breaks are annoying\n\nYear: 2023\nJournal: Journal of Formatting",
+      "authors": ["Johnson, P."],
+      "title": "Line breaks are annoying",
+      "year": 2023,
+      "venue": "Journal of Formatting",
+      "doi": null,
+      "type": "article"
+    }
+  },
+  {
+    "id": "E07",
+    "category": "difficult",
+    "input": "World Health Organization. (2020). Report on global health. Geneva, Switzerland. Retrieved from https://who.int/report",
+    "expected": {
+      "raw": "World Health Organization. (2020). Report on global health. Geneva, Switzerland. Retrieved from https://who.int/report",
+      "authors": ["World Health Organization"],
+      "title": "Report on global health",
+      "year": 2020,
+      "venue": "Geneva, Switzerland",
+      "doi": null,
+      "type": "web"
+    }
+  },
+  {
+    "id": "E08",
+    "category": "difficult",
+    "input": "Martin, G. R. R. (1996). A Game of Thrones. Bantam Spectra.",
+    "expected": {
+      "raw": "Martin, G. R. R. (1996). A Game of Thrones. Bantam Spectra.",
+      "authors": ["Martin, G. R. R."],
+      "title": "A Game of Thrones",
+      "year": 1996,
+      "venue": "Bantam Spectra",
+      "doi": null,
+      "type": "book"
+    }
+  },
+  {
+    "id": "E09",
+    "category": "missing_metadata",
+    "input": "A paper without authors in 2021 published in IEEE.",
+    "expected": {
+      "raw": "A paper without authors in 2021 published in IEEE.",
+      "authors": [],
+      "title": "A paper without authors",
+      "year": 2021,
+      "venue": "IEEE",
+      "doi": null,
+      "type": "article"
+    }
+  },
+  {
+    "id": "E10",
+    "category": "formatting",
+    "input": "A. Einstein, B. Podolsky, and N. Rosen, \"Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?\" Phys. Rev. 47, 777 (1935), DOI: 10.1103/PhysRev.47.777",
+    "expected": {
+      "raw": "A. Einstein, B. Podolsky, and N. Rosen, \"Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?\" Phys. Rev. 47, 777 (1935), DOI: 10.1103/PhysRev.47.777",
+      "authors": ["A. Einstein", "B. Podolsky", "N. Rosen"],
+      "title": "Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?",
+      "year": 1935,
+      "venue": "Phys. Rev.",
+      "doi": "10.1103/PhysRev.47.777",
+      "type": "article"
+    }
+  },
+  {
+    "id": "E11",
+    "category": "noisy",
+    "input": "---- Page 42 ----\nSmith, J. (2010). Pagination artifacts. \n---- Page 43 ----\nJournal of Weird Docs.",
+    "expected": {
+      "raw": "---- Page 42 ----\nSmith, J. (2010). Pagination artifacts. \n---- Page 43 ----\nJournal of Weird Docs.",
+      "authors": ["Smith, J."],
+      "title": "Pagination artifacts",
+      "year": 2010,
+      "venue": "Journal of Weird Docs.",
+      "doi": null,
+      "type": "article"
+    }
+  },
+  {
+    "id": "E12",
+    "category": "difficult",
+    "input": "Turing, A. M. (1950). Computing Machinery and Intelligence. Mind, LIX(236), 433-460.",
+    "expected": {
+      "raw": "Turing, A. M. (1950). Computing Machinery and Intelligence. Mind, LIX(236), 433-460.",
+      "authors": ["Turing, A. M."],
+      "title": "Computing Machinery and Intelligence",
+      "year": 1950,
+      "venue": "Mind",
+      "doi": null,
+      "type": "article"
+    }
+  },
+  {
+    "id": "E13",
+    "category": "clean",
+    "input": "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017). Attention is all you need. Advances in neural information processing systems, 30.",
+    "expected": {
+      "raw": "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017). Attention is all you need. Advances in neural information processing systems, 30.",
+      "authors": ["Vaswani, A.", "Shazeer, N.", "Parmar, N.", "Uszkoreit, J.", "Jones, L.", "Gomez, A. N.", "Kaiser, L.", "Polosukhin, I."],
+      "title": "Attention is all you need",
+      "year": 2017,
+      "venue": "Advances in neural information processing systems",
+      "doi": null,
+      "type": "conference"
+    }
+  },
+  {
+    "id": "E14",
+    "category": "formatting",
+    "input": "*   Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. In NIPS (pp. 2672-2680).",
+    "expected": {
+      "raw": "*   Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. In NIPS (pp. 2672-2680).",
+      "authors": ["Goodfellow, I.", "Pouget-Abadie, J.", "Mirza, M.", "Xu, B.", "Warde-Farley, D.", "Ozair, S.", "Bengio, Y."],
+      "title": "Generative adversarial nets",
+      "year": 2014,
+      "venue": "NIPS",
+      "doi": null,
+      "type": "conference"
+    }
+  },
+  {
+    "id": "E15",
+    "category": "multiple",
+    "input": "[10] Lecun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. Nature, 521(7553), 436-444.\n\n[11] Silver, D. et al. (2016). Mastering the game of Go with deep neural networks and tree search. Nature, 529(7587), 484-489.",
+    "expected": [
+      {
+        "raw": "[10] Lecun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. Nature, 521(7553), 436-444.",
+        "authors": ["Lecun, Y.", "Bengio, Y.", "Hinton, G."],
+        "title": "Deep learning",
+        "year": 2015,
+        "venue": "Nature",
+        "doi": null,
+        "type": "article"
+      },
+      {
+        "raw": "[11] Silver, D. et al. (2016). Mastering the game of Go with deep neural networks and tree search. Nature, 529(7587), 484-489.",
+        "authors": ["Silver, D.", "et al."],
+        "title": "Mastering the game of Go with deep neural networks and tree search",
+        "year": 2016,
+        "venue": "Nature",
+        "doi": null,
+        "type": "article"
+      }
+    ]
+  },
+  {
+    "id": "E16",
+    "category": "difficult",
+    "input": "Federal Reserve Board (2024). Monetary Policy Report, February 2024.",
+    "expected": {
+      "raw": "Federal Reserve Board (2024). Monetary Policy Report, February 2024.",
+      "authors": ["Federal Reserve Board"],
+      "title": "Monetary Policy Report, February 2024",
+      "year": 2024,
+      "venue": null,
+      "doi": null,
+      "type": "other"
+    }
+  },
+  {
+    "id": "E17",
+    "category": "noisy",
+    "input": "Brown\n\n\n\n\nT. (2020) Language \nModels are Few-Shot Learners. \nNeurIPS.",
+    "expected": {
+      "raw": "Brown\n\n\n\n\nT. (2020) Language \nModels are Few-Shot Learners. \nNeurIPS.",
+      "authors": ["Brown, T."],
+      "title": "Language Models are Few-Shot Learners",
+      "year": 2020,
+      "venue": "NeurIPS",
+      "doi": null,
+      "type": "conference"
+    }
+  },
+  {
+    "id": "E18",
+    "category": "formatting",
+    "input": "Krizhevsky, A., Sutskever, I. and Hinton, G. E., 2012. ImageNet classification with deep convolutional neural networks. Advances in neural information processing systems, 25.",
+    "expected": {
+      "raw": "Krizhevsky, A., Sutskever, I. and Hinton, G. E., 2012. ImageNet classification with deep convolutional neural networks. Advances in neural information processing systems, 25.",
+      "authors": ["Krizhevsky, A.", "Sutskever, I.", "Hinton, G. E."],
+      "title": "ImageNet classification with deep convolutional neural networks",
+      "year": 2012,
+      "venue": "Advances in neural information processing systems",
+      "doi": null,
+      "type": "conference"
+    }
+  },
+  {
+    "id": "E19",
+    "category": "clean",
+    "input": "Ouyang, L. et al. (2022). Training language models to follow instructions with human feedback. NeurIPS, 10.1234/neurips.2022",
+    "expected": {
+      "raw": "Ouyang, L. et al. (2022). Training language models to follow instructions with human feedback. NeurIPS, 10.1234/neurips.2022",
+      "authors": ["Ouyang, L.", "et al."],
+      "title": "Training language models to follow instructions with human feedback",
+      "year": 2022,
+      "venue": "NeurIPS",
+      "doi": "10.1234/neurips.2022",
+      "type": "conference"
+    }
+  },
+  {
+    "id": "E20",
+    "category": "missing_metadata",
+    "input": "A weird string that is just a title",
+    "expected": {
+      "raw": "A weird string that is just a title",
+      "authors": [],
+      "title": "A weird string that is just a title",
+      "year": null,
+      "venue": null,
+      "doi": null,
+      "type": "other"
+    }
+  },
+  {
+    "id": "E21",
+    "category": "multiple",
+    "input": "Reference 1: Smith, J. (2020). Ref1 Title. Venue1.\nReference 2: Doe, J. (2021). Ref2 Title. Venue2.",
+    "expected": [
+      {
+        "raw": "Reference 1: Smith, J. (2020). Ref1 Title. Venue1.",
+        "authors": ["Smith, J."],
+        "title": "Ref1 Title",
+        "year": 2020,
+        "venue": "Venue1",
+        "doi": null,
+        "type": "article"
+      },
+      {
+        "raw": "Reference 2: Doe, J. (2021). Ref2 Title. Venue2.",
+        "authors": ["Doe, J."],
+        "title": "Ref2 Title",
+        "year": 2021,
+        "venue": "Venue2",
+        "doi": null,
+        "type": "article"
+      }
+    ]
+  },
+  {
+    "id": "E22",
+    "category": "formatting",
+    "input": "Doe, J. (forthcoming). Time travel. Journal of Future Science.",
+    "expected": {
+      "raw": "Doe, J. (forthcoming). Time travel. Journal of Future Science.",
+      "authors": ["Doe, J."],
+      "title": "Time travel",
+      "year": null,
+      "venue": "Journal of Future Science",
+      "doi": null,
+      "type": "article"
+    }
+  },
+  {
+    "id": "E23",
+    "category": "difficult",
+    "input": "Linux Kernel Organization. (2023). The Linux Kernel documentation.",
+    "expected": {
+      "raw": "Linux Kernel Organization. (2023). The Linux Kernel documentation.",
+      "authors": ["Linux Kernel Organization"],
+      "title": "The Linux Kernel documentation",
+      "year": 2023,
+      "venue": null,
+      "doi": null,
+      "type": "other"
+    }
+  },
+  {
+    "id": "E24",
+    "category": "noisy",
+    "input": "Smith 2021\nTitle: A short thing\n\n\nhttps://doi.org/10.999/xyz",
+    "expected": {
+      "raw": "Smith 2021\nTitle: A short thing\n\n\nhttps://doi.org/10.999/xyz",
+      "authors": ["Smith"],
+      "title": "A short thing",
+      "year": 2021,
+      "venue": null,
+      "doi": "10.999/xyz",
+      "type": "article"
+    }
+  },
+  {
+    "id": "E25",
+    "category": "clean",
+    "input": "Ramesh, A., Pavlov, M., Goh, G., Gray, S., Voss, C., Radford, A., Chen, M., & Sutskever, I. (2021). Zero-shot text-to-image generation. ICML, 10.999/icml.2021",
+    "expected": {
+      "raw": "Ramesh, A., Pavlov, M., Goh, G., Gray, S., Voss, C., Radford, A., Chen, M., & Sutskever, I. (2021). Zero-shot text-to-image generation. ICML, 10.999/icml.2021",
+      "authors": ["Ramesh, A.", "Pavlov, M.", "Goh, G.", "Gray, S.", "Voss, C.", "Radford, A.", "Chen, M.", "Sutskever, I."],
+      "title": "Zero-shot text-to-image generation",
+      "year": 2021,
+      "venue": "ICML",
+      "doi": "10.999/icml.2021",
+      "type": "conference"
+    }
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "title": "A study of citation verification",
+    "authors": [
+      "Smith, J."
+    ],
+    "year": 2020,
+    "venue": "Journal of Testing",
+    "doi": "10.1234/test.1",
+    "source": "Crossref"
+  },
+  {
+    "title": "Deterministic matching engines",
+    "authors": [
+      "Doe, A.",
+      "Lee, B."
+    ],
+    "year": 2021,
+    "venue": "IEEE Access",
+    "doi": "10.1234/test.2",
+    "source": "OpenAlex"
+  },
+  {
+    "title": "Machine learning for parsing citations",
+    "authors": [
+      "Wang, X.",
+      "Zhang, Y.",
+      "Liu, Q."
+    ],
+    "year": 2019,
+    "venue": "Conference on ML",
+    "doi": "10.1234/test.3",
+    "source": "Semantic Scholar"
+  },
+  {
+    "title": "Deep learning in NLP",
+    "authors": [
+      "Jones, M."
+    ],
+    "year": 2022,
+    "venue": "NLP Transactions",
+    "doi": null,
+    "source": "Crossref"
+  },
+  {
+    "title": "A survey of large language models",
+    "authors": [
+      "Brown, C.",
+      "White, D."
+    ],
+    "year": 2023,
+    "venue": "AI Review",
+    "doi": "10.5678/ai.2023",
+    "source": "OpenAlex"
+  },
+  {
+    "title": "Deterministic matching engines Part 6",
+    "authors": [
+      "Doe, A.",
+      "Lee, B."
+    ],
+    "year": 2021,
+    "venue": "IEEE Access",
+    "doi": "10.1234/test.26",
+    "source": "OpenAlex"
+  },
+  {
+    "title": "Machine learning for parsing citations Part 7",
+    "authors": [
+      "Wang, X.",
+      "Zhang, Y.",
+      "Liu, Q."
+    ],
+    "year": 2019,
+    "venue": "Conference on ML",
+    "doi": "10.1234/test.37",
+    "source": "Semantic Scholar"
+  },
+  {
+    "title": "Deep learning in NLP Part 8",
+    "authors": [
+      "Jones, M."
+    ],
+    "year": 2022,
+    "venue": "NLP Transactions",
+    "doi": null,
+    "source": "Crossref"
+  },
+  {
+    "title": "A survey of large language models Part 9",
+    "authors": [
+      "Brown, C.",
+      "White, D."
+    ],
+    "year": 2023,
+    "venue": "AI Review",
+    "doi": "10.5678/ai.20239",
+    "source": "OpenAlex"
+  },
+  {
+    "title": "A study of citation verification Part 10",
+    "authors": [
+      "Smith, J."
+    ],
+    "year": 2020,
+    "venue": "Journal of Testing",
+    "doi": "10.1234/test.110",
+    "source": "Crossref"
+  },
+  {
+    "title": "Deterministic matching engines Part 11",
+    "authors": [
+      "Doe, A.",
+      "Lee, B."
+    ],
+    "year": 2021,
+    "venue": "IEEE Access",
+    "doi": "10.1234/test.211",
+    "source": "OpenAlex"
+  },
+  {
+    "title": "Machine learning for parsing citations Part 12",
+    "authors": [
+      "Wang, X.",
+      "Zhang, Y.",
+      "Liu, Q."
+    ],
+    "year": 2019,
+    "venue": "Conference on ML",
+    "doi": "10.1234/test.312",
+    "source": "Semantic Scholar"
+  },
+  {
+    "title": "Deep learning in NLP Part 13",
+    "authors": [
+      "Jones, M."
+    ],
+    "year": 2022,
+    "venue": "NLP Transactions",
+    "doi": null,
+    "source": "Crossref"
+  },
+  {
+    "title": "A survey of large language models Part 14",
+    "authors": [
+      "Brown, C.",
+      "White, D."
+    ],
+    "year": 2023,
+    "venue": "AI Review",
+    "doi": "10.5678/ai.202314",
+    "source": "OpenAlex"
+  },
+  {
+    "title": "A study of citation verification Part 15",
+    "authors": [
+      "Smith, J."
+    ],
+    "year": 2020,
+    "venue": "Journal of Testing",
+    "doi": "10.1234/test.115",
+    "source": "Crossref"
+  }
+]

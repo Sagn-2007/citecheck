@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+rapidfuzz
+httpx
+google-genai
+pdfplumber
+python-docx
+python-multipart

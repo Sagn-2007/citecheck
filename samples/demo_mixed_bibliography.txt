@@ -1,0 +1,9 @@
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017). Attention is all you need. Advances in neural information processing systems, 30.
+
+LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. Nature, 521(7553), 436-444. https://doi.org/10.1038/nature14539
+
+Smith, J., & Doe, A. (2025). The future of quantum LLMs in interstellar networking. Journal of Imaginary Research.
+
+Vaswani, A., Shazeer, N., et al. (1990). Attention is all you need. Journal of Fake Science.
+
+Brown, T. (2020). Language Models are Few-Shot Learners. NeurIPS. https://doi.org/10.invalid/fake
